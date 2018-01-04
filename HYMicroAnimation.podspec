@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
 s.name         = "HYMicroAnimation"
-s.version      = "1.0.0"
+s.version      = "1.0.1"
 s.summary      = "一个微动画集合项目"
 
 s.homepage     = "https://github.com/C-H-Y/HYMicroAnimation"

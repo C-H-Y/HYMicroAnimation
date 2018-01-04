@@ -228,8 +228,8 @@
     
     //太阳改变颜色
     [_animationManager animationObject:_cricleLayer addAnimationFromValue:(id)(_on ? _onSunColor : _offSunColor).CGColor toValue:(id)(_on ? _offSunColor : _onSunColor).CGColor delegate:self animationKey:HYSunAnimationSunChangeColorKey];
-    //太阳 <->月亮
-    CGFloat w = _cricleBounds.size.width + 0.5;
+    //太阳 <->月亮 1是调整值 
+    CGFloat w = _cricleBounds.size.width+1;
     [_animationManager animationObject:_sunLayer addAnimationFromValue:@(_on ? w +w/2.0f*1.3f: w) toValue:@(_on ? w : w + w/2.0f*1.3f) delegate:self animationKey:HYSunAnimationSunChangeShapeKey];
     
     //到中间变小
@@ -246,7 +246,7 @@
 
     if (flag) {
         
-         CGFloat  w = _cricleBounds.size.width+0.5;
+         CGFloat  w = _cricleBounds.size.width+1;
         //不能直接用HYSunAnimationSunChangeShapeKey获取anim
         if (anim == [_animationManager getAnimationWithKey:HYSunAnimationSunChangeShapeKey object:_sunLayer]) {
             //形状变化动画结束 固定
